@@ -65,7 +65,7 @@ export default class AdminAutomovil extends Component{
         return(
             <div className="col-md-12">
                     <FormAutomovil
-                        agregarAutomovil={(marca,modelo,anio,transmision)=> this.agregarAutomovil(marca,modelo,anio,transmision)}
+                        agregarAutomovil={(marca,modelo,anio,transmision)=>this.agregarAutomovil(marca,modelo,anio,transmision)}
                     />
                     <hr/>
                     <table className="table table-hover" id="tblAutomoviles">
@@ -87,7 +87,7 @@ export default class AdminAutomovil extends Component{
 
                                     return(
                                         <AutomovilItem
-                                            onUpdateAuto={(marca,modelo,anio,transmision)=> this.updateAutomovil(marca,modelo,anio,transmision,index)}
+                                            onUpdateAuto={(marca,modelo,anio,transmision)=>this.updateAutomovil(marca,modelo,anio,transmision,index)}
                                             onRemove={()=> this.removeAutomovil(o)}
                                             index = {index}
                                             key = {index}

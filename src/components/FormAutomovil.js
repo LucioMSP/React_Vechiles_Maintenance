@@ -94,7 +94,7 @@ export default class FormAutomovil extends Component {
                         />
                     </div>
                     <div className="col-md-6" style={{marginTop:'10px'}}>
-                        <button type="submit" className="btn btn-primary mb-2">
+                        <button type='submit' className="btn btn-primary mb-2">
                             Agregar
                         </button>
                     </div>
