@@ -15,7 +15,7 @@ export default class AutomovilItem extends Component {
     onEditMode(){
         if(this.state.editMode){
             const {onUpdateAuto} = this.props
-            onUpdateAuto(this.state.marca, this.state.modelo, this.state.anio, this.state.transmision)
+            onUpdateAuto(this.state.marca,this.state.modelo,this.state.anio,this.state.transmision)
         }
 
         this.setState({
@@ -137,7 +137,7 @@ export default class AutomovilItem extends Component {
                         <button
                             type="button"
                             className="btn btn-danger"
-                            onClick="onRemove"
+                            onClick={onRemove}
                             style={{marginLeft:'7px'}}
                             >
                                 Eliminar
