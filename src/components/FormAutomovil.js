@@ -17,10 +17,10 @@ export default class FormAutomovil extends Component {
         this.props.agregarAutomovil(this.state.marca,this.state.modelo,this.state.anio,this.state.transmision)
 
         this.setState({
-            marca: "",
+            marca:"",
             modelo:"",
-            anio: "",
-            transmision: ""
+            anio:"",
+            transmision:""
         });
     }
 

@@ -11,7 +11,7 @@ export default class AdminAutomovil extends Component{
     }
 
     agregarAutomovil(marca,modelo,anio,transmision){
-        if(marca!== "" && modelo!== "" && anio!== "", transmision!== ""){
+        if(marca!=="" && modelo!=="" && anio!=="" && transmision!==""){
             console.clear()
 
             this.setState({

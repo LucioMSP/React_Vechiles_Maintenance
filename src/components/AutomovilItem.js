@@ -23,41 +23,41 @@ export default class AutomovilItem extends Component {
         })
     }
 
-    handledChange(evt){
+    handleChange(evt){
         this.setState({
             marca: evt.target.value
         })
     }
 
-    handledChange2(evt){
+    handleChange2(evt){
         this.setState({
             modelo: evt.target.value
         })
     }
 
-    handledChange3(evt){
+    handleChange3(evt){
         this.setState({
             anio: evt.target.value
         })
     }
 
-    handledChange4(evt){
+    handleChange4(evt){
         this.setState({
             transmision: evt.target.value
         })
     }
 
     dynamicComponent(){
-        let input, input2, input3, input4, actionButton
-        const {editMode, marca,modelo,anio,transmision} = this.state
+        let input,input2,input3,input4,actionButton
+        const {editMode,marca,modelo,anio,transmision} = this.state
         
         if(editMode){
             input = (
                 <input
-                    type= "text"
+                    type="text"
                     className="form-control"
-                    value = {marca}
-                    onChange = {(e) => this.handledChange}
+                    value={marca}
+                    onChange={(e)=>this.handleChange(e)}
                 />
             )
 
@@ -66,7 +66,7 @@ export default class AutomovilItem extends Component {
                     type= "text"
                     className="form-control"
                     value = {modelo}
-                    onChange = {(e) => this.handledChange2}
+                    onChange = {(e) => this.handleChange2(e)}
                 />
             )
 
@@ -75,7 +75,7 @@ export default class AutomovilItem extends Component {
                     type= "text"
                     className="form-control"
                     value = {anio}
-                    onChange = {(e) => this.handledChange3}
+                    onChange={(e)=>this.handleChange3(e)}
                 />
             )
 
@@ -84,13 +84,13 @@ export default class AutomovilItem extends Component {
                     type= "text"
                     className="form-control"
                     value = {transmision}
-                    onChange = {(e) => this.handledChange4}
+                    onChange={(e)=>this.handleChange4(e)}
                 />
             )
 
             actionButton = (
                     <button
-                        type="buttoon"
+                        type="button"
                         className="btn btn-warning text-white"
                         onClick={this.onEditMode.bind(this)}
                     >
@@ -98,7 +98,8 @@ export default class AutomovilItem extends Component {
                     </button>
                 )
         }
-        else{
+        else
+        {
             input = marca
             input2 = modelo
             input3 = anio
@@ -106,7 +107,7 @@ export default class AutomovilItem extends Component {
 
             actionButton = (
                 <button
-                    type="buttoon"
+                    type="button"
                     className="btn btn-warning text-white"
                     onClick={this.onEditMode.bind(this)}
                 >
@@ -114,8 +115,7 @@ export default class AutomovilItem extends Component {
                 </button>
             )
         }
-
-        return(input, input2, input3, input4, actionButton)
+        return(input,input2,input3,input4,actionButton)
     }
 
     render(){
