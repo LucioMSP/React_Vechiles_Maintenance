@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AdminAutomovil from './components/AdminAutomovil'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div className="App container">
+     <br></br>
+     <div className="card border-primary mb-3">
+       <div className="card-header">
+        <h5 style={{textAlign:'center'}}>MANTENIMIENTO DE AUTOMÓVILES - REACTJS</h5>
+       </div>
+       <div className="card-body">
+         <h5 className="card-title">Agregar Automovil:</h5>
+         <AdminAutomovil/>
+       </div>
+     </div>
+   </div>
   );
 }
 
